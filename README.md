@@ -1,7 +1,7 @@
 # Sistema de Loja de Informática
 
 Projeto acadêmico da disciplina **Modelagem de Banco de Dados**.  
-O objetivo é implementar em **SQLite 3** um banco de dados relacional para controle de estoque de uma Loja de Informática, aplicando comandos SQL (INSERT, SELECT, UPDATE e DELETE).
+O objetivo é implementar em **SQLite 3** um banco de dados relacional para uma Loja de Informática, aplicando comandos SQL (INSERT, SELECT, UPDATE e DELETE).
 
 Entidades principais: Cliente, OrdemServico, Manutencao, Peça, Estoque, Saida.  
 Relacionamentos: Cliente 1:N Peça; OrdemServico 1:N Peça; Manutencao 1:N Peça; Peça 1:N Peça; Estoque 1:N Peça; Saida.
