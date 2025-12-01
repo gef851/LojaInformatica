@@ -1,7 +1,7 @@
-INSERT INTO Categoria (nome_categoria) VALUES
-('Motor'), ('Suspensão'), ('Freios');
+INSERT INTO Cliente (nome_cliente) VALUES
+('MARIA'), ('SAMUEL'), ('FLÁVIA');
 
-INSERT INTO Fornecedor (nome, telefone, email, cnpj) VALUES
+INSERT INTO OrdemServico (nome, telefone, email, cnpj) VALUES
 ('AutoParts Brasil', '21999999999', 'contato@autoparts.com', '12.345.678/0001-99'),
 ('Distribuidora Mecânica', '21988888888', 'vendas@distribuidora.com', '98.765.432/0001-11');
 
