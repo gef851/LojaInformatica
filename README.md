@@ -1,2 +1,37 @@
-# LojaInformatica
-Loja
+# Sistema de Controle de Estoque de Peças - Fênix AutoParts
+
+Projeto acadêmico da disciplina **Modelagem de Banco de Dados**.  
+O objetivo é implementar em **SQLite 3** um banco de dados relacional para controle de estoque de peças automotivas, aplicando comandos SQL (INSERT, SELECT, UPDATE e DELETE).
+
+Entidades principais: Categoria, Fornecedor, Cliente, Peça, EntradaEstoque, SaidaVenda.  
+Relacionamentos: Categoria 1:N Peça; Fornecedor 1:N Peça; Peça 1:N EntradaEstoque; Peça 1:N SaidaVenda; Cliente 1:N SaidaVenda.
+
+Scripts disponíveis:  
+- `create_tables.sql` → criação das tabelas  
+- `insert_data.sql` → inserção de dados fictícios  
+- `select_queries.sql` → consultas com filtros e junções  
+- `update_delete.sql` → atualizações e exclusões condicionais  
+
+Execução no SQLite 3:  
+1. Criar o banco: `sqlite3 fenix_autoparts.db`  
+2. Rodar os scripts na ordem:  
+
+.read create_tables.sql 
+.read insert_data.sql 
+.read select_queries.sql 
+.read update_delete.sql
+
+3. Conferir resultados com consultas como:  
+
+SELECT * FROM Peca; 
+SELECT * FROM SaidaVenda;
+
+
+Este repositório atende integralmente às exigências da **Experiência Prática IV**, incluindo:  
+- Script de INSERT para povoar tabelas principais  
+- Script com 2–5 SELECT usando WHERE, ORDER BY, LIMIT, JOIN  
+- Script com ao menos 3 UPDATE e 3 DELETE com condições  
+- README.md com instruções de execução  
+- Repositório público no GitHub  
+
+Autor: **Leonardo Perdone da Silva** – Cruzeiro do Sul Virtual – CST em Análise e Desenvolvimento de Sistemas – Turma 2A (2025/2)
