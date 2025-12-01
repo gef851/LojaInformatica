@@ -1,6 +1,6 @@
-CREATE TABLE Categoria (
-    id_categoria INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome_categoria TEXT NOT NULL
+CREATE TABLE Cliente (
+    id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome_cliente TEXT NOT NULL
 );
 
 CREATE TABLE Fornecedor (
