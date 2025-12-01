@@ -1,10 +1,10 @@
-# Sistema de Controle de Estoque de Peças - Fênix AutoParts
+# Sistema de Loja de Informática
 
 Projeto acadêmico da disciplina **Modelagem de Banco de Dados**.  
 O objetivo é implementar em **SQLite 3** um banco de dados relacional para controle de estoque de peças automotivas, aplicando comandos SQL (INSERT, SELECT, UPDATE e DELETE).
 
-Entidades principais: Categoria, Fornecedor, Cliente, Peça, EntradaEstoque, SaidaVenda.  
-Relacionamentos: Categoria 1:N Peça; Fornecedor 1:N Peça; Peça 1:N EntradaEstoque; Peça 1:N SaidaVenda; Cliente 1:N SaidaVenda.
+Entidades principais: Cliente, OrdemServico, Manutencao, Peça, Estoque, Saida.  
+Relacionamentos: Cliente 1:N Peça; OrdemServico 1:N Peça; Manutencao 1:N Peça; Peça 1:N Peça; Estoque 1:N Peça; Saida.
 
 Scripts disponíveis:  
 - `create_tables.sql` → criação das tabelas  
