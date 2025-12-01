@@ -1,7 +1,7 @@
 # Sistema de Loja de Informática
 
 Projeto acadêmico da disciplina **Modelagem de Banco de Dados**.  
-O objetivo é implementar em **SQLite 3** um banco de dados relacional para controle de estoque de peças automotivas, aplicando comandos SQL (INSERT, SELECT, UPDATE e DELETE).
+O objetivo é implementar em **SQLite 3** um banco de dados relacional para controle de estoque de uma Loja de Informática, aplicando comandos SQL (INSERT, SELECT, UPDATE e DELETE).
 
 Entidades principais: Cliente, OrdemServico, Manutencao, Peça, Estoque, Saida.  
 Relacionamentos: Cliente 1:N Peça; OrdemServico 1:N Peça; Manutencao 1:N Peça; Peça 1:N Peça; Estoque 1:N Peça; Saida.
@@ -13,7 +13,7 @@ Scripts disponíveis:
 - `update_delete.sql` → atualizações e exclusões condicionais  
 
 Execução no SQLite 3:  
-1. Criar o banco: `sqlite3 fenix_autoparts.db`  
+1. Criar o banco: `sqlite3 loja_de_informatica.db`  
 2. Rodar os scripts na ordem:  
 
 .read create_tables.sql 
@@ -24,7 +24,7 @@ Execução no SQLite 3:
 3. Conferir resultados com consultas como:  
 
 SELECT * FROM Peca; 
-SELECT * FROM SaidaVenda;
+SELECT * FROM Saida;
 
 
 Este repositório atende integralmente às exigências da **Experiência Prática IV**, incluindo:  
@@ -34,4 +34,4 @@ Este repositório atende integralmente às exigências da **Experiência Prátic
 - README.md com instruções de execução  
 - Repositório público no GitHub  
 
-Autor: **Leonardo Perdone da Silva** – Cruzeiro do Sul Virtual – CST em Análise e Desenvolvimento de Sistemas – Turma 2A (2025/2)
+Autor: **Glauder Emboava Ferreira** – Cruzeiro do Sul Virtual – Ciência da Computação - Modelagem de Banco de Dados - Turma_003_NE – (2025/2)
