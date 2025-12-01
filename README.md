@@ -13,7 +13,7 @@ Scripts disponíveis:
 - `update_delete.sql` → atualizações e exclusões condicionais  
 
 Execução no SQLite 3:  
-1. Criar o banco: `sqlite3 loja_de_informatica.db`  
+1. Criar o banco: `sqlite3 LojaInformatica.db`  
 2. Rodar os scripts na ordem:  
 
 .read create_tables.sql 
