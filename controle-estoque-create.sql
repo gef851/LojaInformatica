@@ -1,21 +1,26 @@
 CREATE TABLE Cliente (
     id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
     nome_cliente TEXT NOT NULL
-);
-
-CREATE TABLE Fornecedor (
-    id_fornecedor INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
-    telefone TEXT,
+    telefone NUMBER,
     email TEXT,
-    cnpj TEXT
+    cpf NUMBER
 );
 
-CREATE TABLE Cliente (
-    id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
-    cpf TEXT UNIQUE,
-    telefone TEXT
+CREATE TABLE OrdemServico (
+    id_ordemservico INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome_produto TEXT NOT NULL,
+    tipo TEXT,
+    problema TEXT,
+    observacao TEXT
+);
+
+CREATE TABLE Manutencao (
+    id_Manutencao INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome_cliente TEXT NOT NULL,
+    nome_produto TEXT,
+    peca_estoque TEXT,
+    preco REAL,
+    quantidade NUMBER INTEGER
 );
 
 CREATE TABLE Peca (
@@ -23,29 +28,30 @@ CREATE TABLE Peca (
     nome TEXT NOT NULL,
     codigo TEXT UNIQUE,
     preco REAL,
-    quantidade INTEGER,
-    id_categoria INTEGER,
-    id_fornecedor INTEGER,
-    FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
-    FOREIGN KEY (id_fornecedor) REFERENCES Fornecedor(id_fornecedor)
+    quantidade NUMBER INTEGER,
+    id_cliente INTEGER,
+    id_ordemservico INTEGER,
+    FOREIGN KEY (id_cLIENTE) REFERENCES Cliente(id_cLIENTE),
+    FOREIGN KEY (id_ordemservico) REFERENCES OrdemServico(id_ordemservico)
 );
 
-CREATE TABLE EntradaEstoque (
+CREATE TABLE Estoque (
     id_entrada INTEGER PRIMARY KEY AUTOINCREMENT,
     data DATE,
-    quantidade INTEGER,
+    quantidade NUMBER INTEGER,
+    preco REAL,
     id_peca INTEGER,
-    id_fornecedor INTEGER,
+    id_ordemservico INTEGER,
     FOREIGN KEY (id_peca) REFERENCES Peca(id_peca),
-    FOREIGN KEY (id_fornecedor) REFERENCES Fornecedor(id_fornecedor)
+    FOREIGN KEY (id_ordemservico) REFERENCES OrdemServio(id_ordemservico)
 );
 
-CREATE TABLE SaidaVenda (
+CREATE TABLE Saida (
     id_saida INTEGER PRIMARY KEY AUTOINCREMENT,
     data DATE,
-    quantidade INTEGER,
+    quantidade NUMBER INTEGER,
     id_peca INTEGER,
     id_cliente INTEGER,
     FOREIGN KEY (id_peca) REFERENCES Peca(id_peca),
-    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
+    FOREIGN KEY (id_manutencao) REFERENCES Manutencao(id_manutencao)
 );
